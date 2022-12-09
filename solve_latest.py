@@ -5,7 +5,9 @@ import importlib
 def solve_day(day: str):
     problem_one_solve = importlib.import_module(f'{day}.one')
     problem_two_solve = importlib.import_module(f'{day}.two')
+    print('Problem One:')
     problem_one_solve.main()
+    print('\nProblem Two:')
     problem_two_solve.main()
 
 
