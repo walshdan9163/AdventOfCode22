@@ -13,8 +13,8 @@ def solve(input_file):
 
     for pair in id_pairs:
         elf_one_ids, elf_two_ids = pair.split(',')
-        elf_one_ids = elf_one_ids.split('-')
-        elf_two_ids = elf_two_ids.split('-')
+        elf_one_ids = [int(x) for x in elf_one_ids.split('-')]
+        elf_two_ids = [int(x) for x in elf_two_ids.split('-')]
 
         if (elf_one_ids[0] <= elf_two_ids[0] and elf_one_ids[1] >= elf_two_ids[1]) or (elf_two_ids[0] <= elf_one_ids[0] and elf_two_ids[1] >= elf_one_ids[1]):
             overlap_count += 1
